@@ -63,20 +63,6 @@ const promiseFive = new Promise(function(resolve, reject){
   } ,4000)
 });
 
-promiseFive.then(() =>{
-  console.log(user)
-  return user.userName
-})
-.then(function(userName){
-  console.log(userName)
-})
-.catch((error) =>{
-  console.log(error)
-})
-.finally(() =>{
-  console.log("the promise is either resolve or rejected")
-})
-
 async function consumePromiseFive(){
   const response = await promiseFive
   console.log(response)
