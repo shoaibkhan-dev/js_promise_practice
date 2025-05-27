@@ -69,3 +69,29 @@ async function consumePromiseFive(){
 }
 
 consumePromiseFive()
+
+
+const promiseSix = new Promise(function(resolve,reject){
+  setTimeout(function(){
+    let error = true;
+    if(!error){
+      resolve({name: "ahmad", age: 23, location: "peshawar"})
+    } else{
+      reject("something went wrong")
+    }
+  },2000)
+});
+
+promiseSix.then((name){
+  console.log(user)
+  return name.userName
+})
+.then((userName)=>{
+  console.log(userName)
+})
+.catch((error)=>{
+  console.log(error)
+})
+.finally(()=>{
+  console.log("the promise is either resolved or rejected")
+})
