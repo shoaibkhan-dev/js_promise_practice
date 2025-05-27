@@ -96,18 +96,3 @@ promiseSix.then((name){
   console.log("the promise is either resolved or rejected")
 })
 
-
-
-promiseSix.then((name){
-  console.log(user)
-  return name.userName
-})
-.then((userName)=>{
-  console.log(userName)
-})
-.catch((error)=>{
-  console.log(error)
-})
-.finally(()=>{
-  console.log("the promise is either resolved or rejected")
-})
