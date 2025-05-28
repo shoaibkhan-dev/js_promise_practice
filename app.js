@@ -82,7 +82,7 @@ const promiseSix = new Promise(function(resolve,reject){
   },2000)
 });
 
-promiseSix.then((name){
+promiseSix.then((name)=>{
   console.log(user)
   return name.userName
 })
@@ -96,3 +96,45 @@ promiseSix.then((name){
   console.log("the promise is either resolved or rejected")
 })
 
+
+
+const promiseOne = new Promise(function(resolve,reject){
+  setTimeout(function(){
+    let error = true;
+    if(!error){
+      resolve({name: "shoaib", rollNo: 25})
+    } else{
+      reject("something went wrong")
+    }
+  },2000)
+});
+
+async function consumePromiseone() {
+  try {
+    const response = await promiseOne
+    console.log(response)
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+consumePromiseone()
+
+
+async function  consumePsromiseOne() {
+  try{
+    const resolve = await promiseOne
+    console.log(response)
+  } catch (error){
+    console.log(error)
+  }
+}
+
+
+async function consumePromiseFive(){
+  try{
+    const resolve = await promiseFive
+    
+    console.log(response)
+  }
+}
