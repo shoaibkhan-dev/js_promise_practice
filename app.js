@@ -140,3 +140,11 @@ async function consumePromiseFive(){
   }
 }
 
+function first() {
+  second()
+  console.log("hello")
+}
+function second(){
+  console.log("everyone")
+}
+first
