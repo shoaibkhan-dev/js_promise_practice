@@ -140,3 +140,13 @@ async function consumePromiseFive(){
   }
 }
 
+
+async function consumePromiseFive(){
+  try{
+    const resolve = await promiseFive
+
+    console.log(response)
+  } catch (error){
+    console.log(error)
+  }
+}
